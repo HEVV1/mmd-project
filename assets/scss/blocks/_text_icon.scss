@@ -1,0 +1,19 @@
+.block-text-icon{
+    display: inline-block;
+    .wrapper-text-icon{
+        display: flex;
+        margin-left: 15px;
+        margin-right: 15px;
+        .wrapper-icon{
+            i{
+                color: $color_2;
+            }           
+        }
+        .wrapper-text{
+            span{
+                white-space: nowrap;
+                padding-left: 15px;
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+.layout-menu{
+    position: fixed;
+    top: 86px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 86px);
+    overflow: auto;
+    z-index: 3;
+    transform: translateX(-100%);
+    transition: ease-in-out $default_transition_time;
+    &.active{
+        transform: translateX(0);
+    }
+    .wrapper-menu{
+        .wrapper-menu-contacts{
+            width: 100%;
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+.layout-form{
+    .wrapper-form{
+        .wrapper-label{
+            &.obligatorily{
+                &:after{
+                    display: inline-block;
+                    content: '*';
+                    color: $color_5;
+                }
+            }
+        }
+        .wrapper-button{
+            text-align: center;
+        }
+    }
+}

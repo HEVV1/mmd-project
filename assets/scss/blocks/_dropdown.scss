@@ -1,0 +1,100 @@
+.block-dropdown{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    .wrapper-dropdown{
+        width: 100%;
+        border-bottom: 1px solid $color_1;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        cursor: pointer;
+        transition: ease-in-out $default_transition_time;
+        .wrapper-dropdown-button{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .wrapper-text{
+                span{
+                    transition: ease-in-out $default_transition_time;
+                }
+            }
+            .plus{
+                position: relative;
+                height: 24px;
+                width: 24px;
+                border: 2.5px solid $color_1;
+                border-radius: 100%;
+                transition: ease-in-out $default_transition_time;
+                .line{
+                    width: 70%;
+                    height: 2.5px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    background-color: $color_1;
+                    border-radius: 1px;
+                    transition: ease-in-out $default_transition_time;
+                    &.line-1{
+                        transform: translateX(-50%) translateY(-50%);
+                    }
+                    &.line-2{
+                        transform: translateX(-50%) translateY(-50%) rotateZ(-90deg);
+                    }
+                }
+                &.active{                   
+                    .line{
+                        &.line-2{                            
+                            transform: translateX(-50%) translateY(-50%) rotateZ(0);                            
+                        }
+                    }
+                }
+            }
+        }
+        &:hover{
+            border-color: $color_2;
+            .wrapper-text{
+                span{
+                    color: $color_2;
+                }
+            }
+            .plus{
+                border-color: $color_2;
+                .line{
+                    background-color: $color_2;
+                }
+            }
+        }
+        &.active{
+            border-color: $color_2;
+            .wrapper-text{
+                span{
+                    color: $color_2;
+                }
+            }
+            .plus{
+                border-color: $color_2;
+                .line{
+                    background-color: $color_2;
+                }
+            }
+        }
+    }
+    .hidden-content{
+        display: none;
+        .wrapper-text{
+            padding-top: 20px;            
+        }
+    }
+}
+
+@media (max-width: map-get($map: $grid-breakpoints, $key: 'md') - 1px){
+    .block-dropdown{
+        .wrapper-dropdown{
+            .wrapper-dropdown-button{
+                .plus{
+                    height: 18px;
+                    width: 18px;
+                }
+            }
+        }
+    }
+}

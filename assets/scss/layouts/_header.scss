@@ -1,0 +1,29 @@
+.layout-header{
+    min-height: 134px;
+    display: flex;
+    align-items: center;
+    z-index: 3;    
+    .wrapper-header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .wrapper-header-left{
+            max-width: 75%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+}
+
+@media (max-width: map-get($map: $grid-breakpoints, $key: 'md') - 1px){
+    .layout-header{
+        min-height: 86px;
+        .wrapper-header{
+            .wrapper-header-left{
+                display: none;
+            }
+        }
+    }
+}

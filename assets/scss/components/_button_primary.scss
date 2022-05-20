@@ -1,0 +1,14 @@
+.button-primary{
+    background-color: $color_2;
+    color: $color_1;
+    font-size: 18px;
+    line-height: 23px;
+    font-weight: 600;
+}
+
+@media (max-width: map-get($map: $grid-breakpoints, $key: 'md') - 1px){
+    .button-primary{
+        font-size: 14px;
+        line-height: 18px;
+    }
+}

@@ -1,0 +1,33 @@
+.block-dataline{
+    display: flex;    
+    width: 100%;
+    min-height: 184px;
+    height: 100%;
+    border-top: 2px solid $color_2;
+    border-bottom: 2px solid $color_2;
+    background-color: rgba($color: $color_2, $alpha: 0.2);
+    &.background-not-transparent{
+        background-color: $color_4
+    }
+    .wrapper-dataline{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .dataline-content{
+            .wrapper-text{
+                margin-top: 10px;
+                margin-bottom: 10px;
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media (max-width: map-get($map: $grid-breakpoints, $key: 'md') - 1px){
+    .block-dataline{
+        .wrapper-dataline{
+            flex-flow: column;
+        }
+    }
+}

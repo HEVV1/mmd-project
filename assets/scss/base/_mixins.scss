@@ -1,0 +1,74 @@
+@mixin bgimgin( $file:'', $important: null ){
+	@if $important == important {
+		$important: !important;
+	} @else {
+		$important: null;
+	}
+	background-image: url($image_directory + $file) $important;
+}
+
+@mixin noselect() {
+	-ms-user-select: none;
+	user-select: none;
+}
+
+// "box-shadow" is reserved by bootstrap
+@mixin boxy-shadow( $parameters, $important: null ) {
+	$parameters: unquote($parameters);
+	@if $important == important {
+		$important: !important;
+	} @else {
+		$important: null;
+	}
+	-webkit-box-shadow: $parameters $important;
+	-moz-box-shadow: $parameters $important;
+	box-shadow: $parameters $important;
+}
+
+@mixin linear-gradient($parameters) {
+	$parameters: unquote($parameters);
+	background: -webkit-linear-gradient($parameters); /* For Safari 5.1 to 6.0 */
+	background: linear-gradient($parameters); /* Standard syntax (must be last) */
+}
+
+@mixin radial-gradient($parameters) {
+	$parameters: unquote($parameters);
+	background: -webkit-radial-gradient($parameters);
+	background: radial-gradient($parameters); /* Standard syntax (must be last) */
+}
+
+@mixin optional-at-root($sel) {
+	@at-root #{if(not &, $sel, selector-append(&, $sel))} {
+		@content;
+	}
+}
+
+@mixin placeholder {
+	@include optional-at-root('::-webkit-input-placeholder') {/* WebKit, Blink, Edge */
+		@content;
+	}
+
+	@include optional-at-root(':-moz-placeholder') {/* Mozilla Firefox 4 to 18 */
+		@content;
+		opacity:  1;
+	}
+
+	@include optional-at-root('::-moz-placeholder') {/* Mozilla Firefox 19+ */
+		@content;
+		opacity:  1;
+	}
+
+	@include optional-at-root(':-ms-input-placeholder') {/* Internet Explorer 10-11 */
+		@content;
+	}
+
+	@include optional-at-root('::-ms-input-placeholder') {/* Microsoft Edge */
+		@content;
+	}
+}
+//Buttons mixin
+@mixin button-style($width, $color, $radius-thickness, $radius-color){	
+	width: $width;
+	background-color: $color;
+	border: $radius-thickness solid $radius-color;	
+}

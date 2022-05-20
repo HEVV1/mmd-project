@@ -1,0 +1,21 @@
+/* Colors -----------------------------------------------------------------*/
+$color_1:  #FFFFFF; // White
+$color_2:  #03B8A2; // Light Green
+$color_3:  #00263D; // Dark Blue
+$color_4:  #00374A; // A bit lighter Blue
+$color_5:  #8A0000; // Dark red
+
+
+/* Fonts ------------------------------------------------------------------*/
+$font_awesome_5_pro: 'Font Awesome 5 Pro';
+$font_tt_firs_neue_stack: 'TT Firs Neue';
+$default_font_stack: $font_tt_firs_neue_stack;
+$default_font_size: 15px;
+$default_font_weight: 400;
+$default_line_height: 20px;
+$default_font_color: $color_1;
+
+/* Other ------------------------------------------------------------------*/
+$regular_content_width: 1180px + 54px; // content + outside gutter (left and right together)
+$image_directory: '../../images/';
+$default_transition_time: 300ms;

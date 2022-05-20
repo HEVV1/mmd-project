@@ -1,0 +1,21 @@
+.block-hello{
+    margin-top: 70px;
+    .wrapper-text{       
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: map-get($map: $grid-breakpoints, $key: 'md') - 1px){
+    .block-hello{
+        margin-top: 40px;
+        margin-bottom: 50px;
+        .wrapper-text{       
+            text-align: center;
+        }
+        .wrapper-button{
+            margin-top: 30px;
+            text-align: center;
+        }
+    }
+    
+}

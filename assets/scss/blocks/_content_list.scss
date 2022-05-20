@@ -1,0 +1,30 @@
+.block-content-list{
+    .wrapper-content-list{
+        .wrapper-image{
+            width: 100%;
+            height: 100%;
+            img{
+                height: 100%;
+                width: 100%;
+            }
+        }        
+    }
+}
+
+@media (max-width: map-get($map: $grid-breakpoints, $key: 'md') - 1px){
+    .block-content-list{
+        .wrapper-content-list{
+            .container{
+                padding-left: 0;
+                padding-right: 0;
+            }
+            .wrapper-list{
+                padding-right: 27px;
+                padding-left: 27px;
+                .list{
+                    
+                }
+            }
+        }
+    }
+}

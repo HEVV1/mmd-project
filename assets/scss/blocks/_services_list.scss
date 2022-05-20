@@ -1,0 +1,15 @@
+.block-services-list{
+    .wrapper-services-list{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: map-get($map: $grid-breakpoints, $key: 'md') - 1px){
+    .block-services-list{
+        .container{
+            padding-right: 0 !important;
+            padding-left: 0 !important;
+        }
+    }
+}

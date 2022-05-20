@@ -1,0 +1,75 @@
+// Abstracts - Variables, functions, mixins, and placeholders
+@import
+	'base/variables',
+	'base/mixins',
+	'base/fonts',
+	'../fonts/fontawesome-pro-5.12.0-web/css/all.min.css';
+// Vendors
+@import
+	'vendors/normalize',
+	'vendors/bootstrap/bootstrap-variables-override',
+	'../../assets/node_modules/bootstrap/scss/bootstrap-grid';
+
+// Base
+@import
+	'base/helpers',
+	'base/base',
+	'base/typography';
+// Components
+@import
+	'components/button',
+	'components/button_primary',
+	'components/button_menu',
+	'components/button_service',
+	'components/form_input';
+@import
+	'blocks/background_image',
+	'blocks/header_links',
+	'blocks/logo',
+	'blocks/language_selection',
+	'blocks/text_icon',
+	'blocks/hello',
+	'blocks/aboutus',
+	'blocks/dataline',
+	'blocks/help',
+	'blocks/offers',
+	'blocks/read_more',
+	'blocks/slider',
+	'blocks/new',
+	'blocks/element',
+	'blocks/link_dropdown',
+	'blocks/header_menu_background',
+	'blocks/table',
+	'blocks/contacts_data',
+	'blocks/content_list',
+	'blocks/map',
+	'blocks/page_number',
+	'blocks/services_list',
+	'blocks/service_specs',
+	'blocks/values',
+	'blocks/value_logo',
+	'blocks/popup',
+	'blocks/steps',
+	'blocks/carousel_images',
+	'blocks/choose_service',
+	'blocks/dropdown',
+	'blocks/popup_global';
+// Blocks
+@import
+	'layouts/header',
+	'layouts/form',
+	'layouts/footer',
+	'layouts/menu';
+@import
+	'pages/page_index',
+	'pages/page_opened_new',
+	'pages/page_contacts',
+	'pages/page_all_news',
+	'pages/page_opened_service',
+	'pages/page_services';
+// Browser-specific overrides
+@import
+	'overrides/ff_only',
+	'overrides/safari_only',
+	'overrides/ie10+',
+	'overrides/print';

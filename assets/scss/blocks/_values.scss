@@ -1,0 +1,30 @@
+.block-values{
+    &.values-services{
+        .wrapper-values{
+            .wrapper-text{
+                text-align: center;                
+            }
+        }
+    }
+    .wrapper-values{
+        .wrapper-text{                
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .wrapper-values-logo{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+@media (max-width: map-get($map: $grid-breakpoints, $key: 'md') - 1px){
+    .block-values{
+        .wrapper-values{
+            .wrapper-values-logo{
+                flex-flow: column;               
+            }
+        }
+    }
+}

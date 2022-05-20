@@ -1,0 +1,29 @@
+.block-choose-service{
+    padding-top: 120px;
+    padding-bottom: 120px;
+    position: relative;
+    width: 100%;    
+    background:linear-gradient(0deg, rgba($color: $color_1, $alpha: 0.9), rgba($color: $color_1, $alpha: 0.9)), url(../../images/background_image_opened_service.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    .wrapper-choose-service{
+        .wrapper-text{
+            margin-bottom: 30px;
+        }
+    }
+}
+@media (max-width: map-get($map: $grid-breakpoints, $key: 'md') - 1px){
+    .block-choose-service{
+        padding-top: 40px;
+        padding-bottom: 40px;
+        .wrapper-choose-service{
+            .wrapper-button{
+                text-align: center;
+                a{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

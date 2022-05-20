@@ -1,0 +1,56 @@
+.block-menu-button{    
+    display: none;
+    position: relative;
+    width: 24px;
+    height: 17px;
+    cursor: pointer;
+    .wrapper-menu-button{
+        width: 100%;
+        height: 100%;
+        .line{
+            width: 100%;
+            height: 3px;
+            position: absolute;
+            background-color: $color_2;
+            transition: ease-in-out $default_transition_time;
+            transform-origin: right;
+            &.line-1{
+                top: 0%;
+                border-top-right-radius: 3px;
+            }
+            &.line-2{
+                top: 50%;
+                border-bottom-right-radius: 3px;
+                border-top-right-radius: 3px;
+            }
+            &.line-3{
+                top: 100%;
+                border-bottom-right-radius: 3px;
+            }
+            &.active{
+                &.line-1{
+                    top: 0%;
+                    transform: rotateZ(-45deg);
+                    border-radius: 3px;
+                }
+                &.line-2{
+                    opacity: 0;
+                    visibility: hidden;
+                    border-radius: 3px;
+                }
+                &.line-3{
+                    top: 100%;
+                    transform: rotateZ(45deg);
+                    border-radius: 3px;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: map-get($map: $grid-breakpoints, $key: 'md') - 1px){
+    .block-menu-button{
+        display: block;
+    }
+}

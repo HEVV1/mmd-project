@@ -1,0 +1,13 @@
+.block-read-more{
+    .wrapper-read-more{
+        display: inline-flex;
+        .wrapper-icon{
+            img{
+                width: 16px;
+            }
+        }
+        .wrapper-text{
+            padding-left: 15px;
+        }
+    }
+}

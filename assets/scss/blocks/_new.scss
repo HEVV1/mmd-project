@@ -1,0 +1,35 @@
+.block-new{    
+    &.mobile{
+        display: none;
+    }
+    .wrapper-text{
+        &.header{
+            text-align: center;
+            margin-bottom: 70px;
+        }
+    }
+    .wrapper-new{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .wrapper-button{
+        margin-top: 70px;
+        text-align: center;
+    }
+}
+@media (max-width: map-get($map: $grid-breakpoints, $key: 'md') - 1px){
+    .block-new{
+        &.desktop{
+            display: none;
+        }
+        &.mobile{
+            display: block;
+        }
+        .wrapper-text{
+            &.header{               
+                margin-bottom: 30px;
+            }
+        }        
+    }
+}

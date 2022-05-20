@@ -1,0 +1,51 @@
+.block-contacts-data{
+    .wrapper-contacts-data{
+        .wrapper-contacts-links-icons{
+            .wrapper-link{
+                margin-top: 30px;
+                margin-bottom: 30px;
+            }
+        }
+        .wrapper-contacts-list{
+            ul{
+                li{
+                    margin-top: 13px;
+                    margin-bottom: 13px;
+                    display: flex;                        
+                    &::before{
+                        content: '';
+                        display: block;
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 100%;
+                        background-color: $color_2;                            
+                        margin-top: auto;
+                        margin-bottom: auto;
+                        margin-left: 0;
+                        margin-right: 18px;
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: map-get($map: $grid-breakpoints, $key: 'md') - 1px){
+    .block-contacts-data{
+        .container{
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+            .wrapper-contacts-data{
+                .wrapper-contacts-links-icons{
+                    padding-left: 27px;
+                    padding-right: 27px;
+                }
+                .wrapper-contacts-data-list{
+                    padding-left: 27px;
+                    padding-right: 27px;
+                }
+            }
+        }
+    }
+}

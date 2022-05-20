@@ -1,0 +1,19 @@
+.block-table{    
+    .wrapper-table{
+        display: flex;
+        justify-content: center;        
+    }
+}
+
+@media (max-width: map-get($map: $grid-breakpoints, $key: 'md') - 1px){
+    .block-table{
+        overflow: scroll;
+        .container{
+            padding-left: 0;
+            padding-right: 0;
+            .wrapper-table{
+                min-width: 1120px;
+            }
+        }
+    }
+}

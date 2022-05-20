@@ -1,0 +1,38 @@
+.block-page-number{        
+    .wrapper-page-number{
+        max-width: 245px;
+        width: 100%;       
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .current-pages{            
+            display: flex;            
+            align-items: center;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;       
+        }
+        .wrapper-image{
+            width: 12px;
+            height: 16px;
+            margin-left: 7.5px;
+            margin-right: 7.5px;
+        }
+        .wrapper-link{
+            margin-left: 7.5px;
+            margin-right: 7.5px;
+        }
+        .wrapper-text{
+            margin-left: 7.5px;
+            margin-right: 7.5px;
+        }
+    }
+}
+
+@media (max-width: map-get($map: $grid-breakpoints, $key: 'md') - 1px){
+    .block-page-number{
+        .wrapper-page-number{
+            max-width: 100%;
+        }
+    }
+}

@@ -1,0 +1,76 @@
+.block-aboutus{
+    .wrapper-aboutus{
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        .aboutus-text{
+            z-index: 1;
+            display: flex;
+            flex-flow: column;
+            justify-content: end;
+            grid-row: 1;
+            grid-column: 1 / 6;
+            .aboutus-content{
+                background-color: $color_3;
+                padding-top: 28px;
+                padding-right: 31px;
+            }
+        }
+        .aboutus-image{
+            grid-row: 1;
+            grid-column: 4 / 11;
+            .wrapper-image{
+                width: 100%;
+                height: 406px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            img{
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: map-get($map: $grid-breakpoints, $key: 'md') - 1px){
+    .block-aboutus{
+        .container{
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+        .wrapper-aboutus{
+            display: flex;
+            flex-flow: column;
+            .aboutus-text{
+                padding-left: 27px;
+                padding-right: 27px;
+                transform: translateY(-40px);
+                text-align: center;
+                .wrapper-text{
+                    &.aboutus-header{
+                        background-color: $color_3;
+                        padding-top: 20px;
+                        margin-top: 20px;
+                        margin-bottom: 20px;
+                        width: 70%;                        
+                        margin-right: auto;                        
+                        margin-left: auto;
+                        transform: translateY(-30px);
+                    }
+                    &.aboutus-content{
+                        padding: 0;
+                        background-color: unset;
+                    }
+                }
+            }
+            .aboutus-image{
+                .wrapper-image{
+                    display: none;
+                }
+                img{
+                    display: block;
+                }
+            }
+        }
+    }
+}

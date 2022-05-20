@@ -1,0 +1,84 @@
+.block-page-opened-service{
+    .wrapper-page-opened-service-1{
+        margin-top: 70px;
+        margin-bottom: 150px;
+    }
+    .wrapper-page-opened-service-2{
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .wrapper-page-opened-service-3{
+        margin-top: 120px;
+        margin-bottom: 120px;
+    }
+    .wrapper-page-opened-service-4{
+        margin-top: 70px;
+        margin-bottom: 120px;
+    }
+    .wrapper-page-opened-service-5{
+        margin-top: 120px;
+        margin-bottom: 100px;
+    }
+    .wrapper-page-opened-service-6{
+        margin-top: 70px;
+        margin-bottom: 120px;
+    }
+    .wrapper-page-opened-service-7{        
+        margin-bottom: 50px;
+    }
+    .wrapper-page-opened-service-8{        
+        margin-bottom: 120px;
+    }
+    .wrapper-page-opened-service-9{
+        margin-top: 50px;
+        margin-bottom: 100px;
+    }
+    .wrapper-page-opened-service-list{
+        margin-left: 13px;
+    }
+}
+
+@media (max-width: map-get($map: $grid-breakpoints, $key: 'md') - 1px){
+    .block-page-opened-service{
+        .wrapper-page-opened-service-1{
+            margin-top: 30px;
+            margin-bottom: 20%;
+            .wrapper-button{
+                text-align: center;
+            }
+        }
+        .wrapper-page-opened-service-2{
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        .wrapper-page-opened-service-3{
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        .wrapper-page-opened-service-4{
+            margin-top: 30px;
+            margin-bottom: 50px;
+        }
+        .wrapper-page-opened-service-5{
+            margin-top: 50px;
+            margin-bottom: 40px;
+        }
+        .wrapper-page-opened-service-6{
+            margin-top: 40px;
+            margin-bottom: 70px;
+        }
+        .wrapper-page-opened-service-7{            
+            margin-bottom: 24px;
+        }
+        .wrapper-page-opened-service-8{        
+            margin-bottom: 50px;
+        }
+        .wrapper-page-opened-service-9{
+            margin-top: 25px;
+            margin-bottom: 40px;
+        }
+        .wrapper-page-opened-service-list{
+            display: none;
+        }
+    }
+}

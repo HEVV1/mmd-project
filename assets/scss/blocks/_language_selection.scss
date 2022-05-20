@@ -1,0 +1,17 @@
+.block-language-selection{
+    display: inline-block;
+    .wrapper-language-selection{
+        ul{
+            display: flex;
+            li{
+                margin-left: 10px;
+                a{
+                    transition: ease-in-out $default_transition_time;
+                    &:hover{
+                        color: $color_2;
+                    }
+                }
+            }
+        }
+    }
+}

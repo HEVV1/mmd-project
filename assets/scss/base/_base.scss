@@ -1,0 +1,51 @@
+html {
+	/* 
+		Define root font-size.
+		- it applies default font-size to all childs through inheritance
+		- it provides an easy way to perform "text size change" procedure
+		By default we define every block's text its own font size in pixels.
+		That way it is easier to control potential future "text size change" procedure, which wouldn't affect such blocks.
+		To blocks that we would want to be changed by such a procedure, we would define their font size in rems through sass function.
+	*/
+	font-size: 16px;
+
+	/* 
+		When we put an element outside the viewports right side, 
+		then it causes Chrome DevTools Device Toolbar to render that element fully,
+		causing excess content and horizontal scrollbar.
+		To fix that, we use "overflow-x: hidden;", but it will only truly work when put on both - html and body - elements.
+	*/
+	overflow-x: hidden; 
+	scroll-behavior: smooth;
+}
+body {
+	/* 
+		We can't set "height: 100%", because it causes window to jump to top upon adding ".overflow-hidden",
+		but setting height to auto breaks sticky footer.
+		Min-height fixes it, but breaks .scrollTop() reading on safari.
+		So we add min-height in vh units on a direct child element. 
+	*/
+	display: flex;
+	flex-direction: column;
+	background-color: $color_3;
+	color: $default_font_color;
+	font-family: $default_font_stack;
+	line-height: $default_line_height;
+	font-weight: $default_font_weight;
+	font-size: $default_font_size;
+	overflow-x: hidden;
+}
+.wrapper-page {	
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+.wrapper-page-header-and-content {
+	flex: 1 0 auto;
+	display: flex;
+	flex-direction: column;	
+}
+.wrapper-page-content {
+	flex: 1 0 auto;
+	padding-bottom: 0px;
+}

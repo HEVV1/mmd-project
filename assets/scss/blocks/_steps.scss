@@ -1,0 +1,17 @@
+.block-steps{
+    .wrapper-steps{
+        display: flex;
+        .wrapper-text{
+            pointer-events: none;
+            margin-left: 13px;
+            margin-right: 13px;
+        }
+        .wrapper-link{
+            a{
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

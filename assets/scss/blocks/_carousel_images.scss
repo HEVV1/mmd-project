@@ -1,0 +1,31 @@
+.block-carousel-images{
+    .wrapper-carousel-images{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .wrapper-image{
+            flex-basis: 33%;
+            max-width: 33%;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: map-get($map: $grid-breakpoints, $key: 'md') - 1px){
+    .block-carousel-images{
+        overflow: scroll;
+        .wrapper-carousel-images{
+            min-width: 300%;
+            .wrapper-image{
+                flex-basis: 100%;
+                max-width: 30%;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
